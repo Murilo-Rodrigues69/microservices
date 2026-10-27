@@ -1,0 +1,23 @@
+{
+  "nome": "CERAMICA MASTER FILIAL 2",
+  "cnpj": "11222333000144",
+  "razaoSocial": "CERAMICA MASTER FILIAL 2 LTDA",
+  "nomeFantasia": "CERAMICA MASTER FILIAL 2",
+  "inscricaoEstadual": "109876543",
+  "serie": "1",
+  "naturezaOperacao": "VENDA DE MERCADORIA",
+  "cep": "75460000",
+  "logradouro": "AVENIDA EXEMPLO",
+  "numero": "100",
+  "bairro": "BAIRRO EXEMPLO",
+  "codigoMunicipio": "5214507",
+  "descricaoMunicipio": "NEROPOLIS",
+  "uf": "GO",
+  "modelo": "NFE",
+  "ambiente": "HOMOLOGACAO",
+  "certificadoPfxPath": "env://NFE_CERTIFICADO_PFX_BASE64",
+  "certificadoSenha": "env://NFE_CERTIFICADO_SENHA",
+  "cadeiaJksPath": "env://NFE_CADEIA_JKS_BASE64",
+  "cadeiaSenha": "env://NFE_CADEIA_SENHA",
+  "ativo": true
+}

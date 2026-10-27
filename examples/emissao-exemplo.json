@@ -1,0 +1,36 @@
+{
+  "empresaId": 1,
+  "vendaId": 2001,
+  "numeroNota": "2001",
+  "dataHora": "2026-04-17T15:00:00",
+  "desconto": 0.00,
+  "formaPagamento": "DINHEIRO",
+  "observacao": "Entregar no caixa lateral.",
+  "destinatario": {
+    "nome": "Cliente Demonstracao",
+    "cpfCnpj": "12345678901",
+    "cep": "75460000",
+    "logradouro": "RUA TESTE",
+    "numero": "123",
+    "bairro": "CENTRO",
+    "codigoMunicipio": "5214507",
+    "descricaoMunicipio": "NEROPOLIS",
+    "uf": "GO"
+  },
+  "itens": [
+    {
+      "itemId": 1,
+      "quantidade": 100,
+      "precoUnitario": 1.25,
+      "produto": {
+        "produtoId": 9001,
+        "descricao": "TIJOLO 9X19X19",
+        "ncm": "69041000",
+        "cest": "10.027.00",
+        "origem": "NACIONAL",
+        "cfop": "5102",
+        "unidadeComercial": "UN"
+      }
+    }
+  ]
+}

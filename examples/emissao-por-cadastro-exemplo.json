@@ -1,0 +1,18 @@
+{
+  "empresaId": 1,
+  "vendaId": 3001,
+  "numeroNota": "3001",
+  "dataHora": "2026-05-07T10:00:00",
+  "desconto": 0.00,
+  "formaPagamento": "DINHEIRO",
+  "observacao": "Cliente retirara no balcao.",
+  "clienteEmpresaId": 1,
+  "itens": [
+    {
+      "itemId": 1,
+      "produtoEmpresaId": 1,
+      "quantidade": 100,
+      "precoUnitario": 1.25
+    }
+  ]
+}

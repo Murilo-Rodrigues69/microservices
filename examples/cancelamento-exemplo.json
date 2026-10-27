@@ -1,0 +1,6 @@
+{
+  "empresaId": 1,
+  "chaveAcesso": "00000000000000000000000000000000000000000000",
+  "protocoloAutorizacao": "135260000000000",
+  "justificativa": "Cancelamento por teste controlado em ambiente isolado."
+}

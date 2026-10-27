@@ -1,0 +1,14 @@
+{
+  "nome": "CLIENTE PADRAO",
+  "cpfCnpj": "11222333000144",
+  "inscricaoEstadual": "109876543",
+  "cep": "75460000",
+  "logradouro": "RUA TESTE",
+  "numero": "123",
+  "bairro": "CENTRO",
+  "codigoMunicipio": "5214507",
+  "descricaoMunicipio": "NEROPOLIS",
+  "uf": "GO",
+  "email": "cliente@example.com",
+  "ativo": true
+}
