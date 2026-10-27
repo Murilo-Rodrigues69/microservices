@@ -1,0 +1,13 @@
+.idea/
+target/
+*.log
+
+.env
+.env.*
+**/*.pfx
+**/*.jks
+**/*.pem
+**/*.key
+.git/
+data/
+documentos-fiscais/

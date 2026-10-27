@@ -1,12 +1,12 @@
 # Microservices — serviço fiscal ISA
 
-Projeto acadêmico para demonstrar a integração entre um PDV (ponto de venda) e um serviço fiscal por API HTTP/JSON. Este repositório contém atualmente o **serviço fiscal** e seu painel React. O código do PDV será adicionado posteriormente.
+Projeto acadêmico para demonstrar a integração entre um PDV (ponto de venda) e um serviço fiscal por API HTTP/JSON. Este repositório contém o **serviço fiscal** e seu painel React na raiz, e o **PDV** na pasta [pdv/](pdv/). Consulte também o [README do PDV](pdv/README.md).
 
 ## Arquitetura
 
 ```mermaid
 flowchart LR
-    PDV[PDV — serviço separado a adicionar] -->|HTTP / JSON| Fiscal[Serviço fiscal — Spring Boot]
+    PDV[PDV — pasta pdv/] -->|HTTP / JSON| Fiscal[Serviço fiscal — Spring Boot]
     Painel[Painel React] -->|API / cookie JWT| Fiscal
     Fiscal --> Banco[(Banco fiscal)]
     Fiscal -->|Certificado digital| SEFAZ[SEFAZ]
@@ -16,7 +16,7 @@ flowchart LR
 
 O PDV cuida das vendas e envia seus itens ao fiscal. O fiscal concentra os dados do emitente, montagem e assinatura de XML, comunicação com a SEFAZ, histórico e documentos. Os serviços devem rodar em processos próprios, com configuração e persistência próprias, comunicando-se pela API. O PDV não deve acessar diretamente as tabelas fiscais.
 
-O backend atual é um único serviço Spring Boot organizado em camadas. Controllers, services e repositories são componentes internos. O React é um painel empacotado no mesmo JAR. A demonstração completa com dois serviços depende da adição e execução do PDV.
+O backend atual é um único serviço Spring Boot organizado em camadas. Controllers, services e repositories são componentes internos. O React é um painel empacotado no mesmo JAR. O PDV está disponível em [pdv/](pdv/). Existe uma pendência de autenticação entre as versões publicadas: o fiscal exige cookie JWT além do token, mas o cliente do PDV envia apenas o token. A demonstração integrada exige resolver essa compatibilidade, descrita no [README do PDV](pdv/README.md).
 
 ### Fluxo da venda
 
@@ -189,7 +189,7 @@ Veja [payloads JSON](examples/) e a [documentação complementar](docs/INTEGRACA
 2. Cadastre empresa, produtos e clientes de demonstração.
 3. Mostre xml-preview com APP_NFCE_WS_ENABLED=false. Esse modo não simula autorização da SEFAZ.
 4. Apresente o contrato HTTP e os testes de vendas em PdvIntegrationServiceTests.
-5. Após adicionar o PDV, execute-o em outro processo/porta e demonstre venda, integração e recuperação de documentos. Emissão efetiva em homologação exige certificado e configuração fiscal válidos.
+5. Execute o PDV da pasta pdv em outro processo/porta e, após resolver a compatibilidade de autenticação descrita acima, demonstre venda, integração e recuperação de documentos. Emissão efetiva em homologação exige certificado e configuração fiscal válidos.
 
 ## Testes, pacote e deploy
 
